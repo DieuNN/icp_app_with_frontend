@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "FirstContract_backend": {
+      "main": "src/FirstContract_backend/main.mo",
+      "type": "motoko"
+    },
+    "FirstContract_frontend": {
+      "dependencies": [
+        "FirstContract_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/FirstContract_frontend/src/index.html"
+      },
+      "source": [
+        "src/FirstContract_frontend/assets",
+        "dist/FirstContract_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
